@@ -42,13 +42,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/NERDTree'
+Plugin 'rking/ag.vim'
 Plugin 'taiansu/nerdtree-ag'
 Plugin 'godlygeek/tabular'
 Plugin 'ap/vim-css-color'
 Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 "Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Bling/vim-airline'
 
@@ -560,3 +561,9 @@ map <leader>nt :NERDTree<CR>
 " neocomplcache
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  let g:neocomplcache_enable_at_startup = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nmap <F8> :TagbarToggle<CR>

@@ -4,16 +4,16 @@ My vimrc
 Plugins
 ---
 
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/NERDTree'
-Plugin 'rking/ag.vim'
-Plugin 'taiansu/nerdtree-ag'
-Plugin 'godlygeek/tabular'
-Plugin 'ap/vim-css-color'
-Plugin 'pangloss/vim-javascript'
-Plugin 'groenewege/vim-less'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'Bling/vim-airline'
+* Plugin 'mattn/emmet-vim'
+* Plugin 'scrooloose/NERDTree'
+* Plugin 'rking/ag.vim'
+* Plugin 'taiansu/nerdtree-ag'
+* Plugin 'godlygeek/tabular'
+* Plugin 'ap/vim-css-color'
+* Plugin 'pangloss/vim-javascript'
+* Plugin 'groenewege/vim-less'
+* Plugin 'marijnh/tern_for_vim'
+* Plugin 'Bling/vim-airline'
 
 
 

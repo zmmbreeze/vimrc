@@ -23,6 +23,7 @@
 "    -> Tabular
 "    -> NERDTree
 "    -> neocomplcache
+"    -> vim-airline
 "
 "  Revisions:
 "     > 0.1: release :)
@@ -41,6 +42,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'mattn/emmet-vim'
+Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/NERDTree'
 Plugin 'rking/ag.vim'
 Plugin 'taiansu/nerdtree-ag'
@@ -50,7 +52,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'marijnh/tern_for_vim'
 "Plugin 'majutsushi/tagbar'
-"Plugin 'Shougo/neocomplcache.vim'
+Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Bling/vim-airline'
 
 
@@ -163,7 +165,7 @@ if MySys() == "mac"
 elseif MySys() == "windows"
   set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 elseif MySys() == "linux"
-  set gfn=CosmicSansNeueMono\ 14
+  set gfn=Fantasque\ Sans\ Mono\ 13
   set shell=/bin/bash
 endif
 
@@ -171,16 +173,20 @@ if has("gui_running")
   set guioptions-=T
   set guioptions-=m
   set t_Co=256
-  colorscheme nazca
   if MySys() == "mac"
     set transparency=8
+  endif
+  if MySys() == "linux"
+    set guioptions-=e
   endif
   set nonu
 else
   syntax on
-  colorscheme nazca
   set nonu
 endif
+
+colorscheme base16-default
+
 
 syntax enable
 set background=dark
@@ -560,10 +566,27 @@ map <leader>nt :NERDTree<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neocomplcache
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nmap <F8> :TagbarToggle<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("gui_running")
+  let g:airline_powerline_fonts=1
+else
+  let g:airline_left_sep=''
+  let g:airline_right_sep=''
+endif
+
+

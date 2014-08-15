@@ -6,6 +6,7 @@ Plugins
 
 * Plugin 'mattn/emmet-vim'
 * Plugin 'scrooloose/NERDTree'
+* Plugin 'chriskempson/base16-vim'
 * Plugin 'rking/ag.vim'
 * Plugin 'taiansu/nerdtree-ag'
 * Plugin 'godlygeek/tabular'
@@ -25,7 +26,9 @@ Install
 2. `cd ~`
 3. `git clone https://github.com/zmmbreeze/vimrc.git`
 4. `ln -s ~/vimrc/.vimrc .vimrc`
-5. `ln -s ~/vimrc/.vim .vim
+5. `ln -s ~/vimrc/.vim .vim`
+6. `cd vimrc`
+7. `git submodule init`
 6. Open your vim.
 7. Run `:PluginInstall` in your vim
 8. `cd ~/vimrc/.vim/bundle/tern_for_vim/`

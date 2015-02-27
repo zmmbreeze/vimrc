@@ -162,7 +162,7 @@ syntax enable "Enable syntax hl
 
 " Set font according to system
 if MySys() == "mac"
-  set gfn=Monaco:h13
+  set gfn=Source\ Code\ Pro\ for\ Powerline:h14
   set linespace=2
   set shell=/bin/bash
 elseif MySys() == "windows"
@@ -180,12 +180,13 @@ if has("gui_running")
     set transparency=8
   endif
   set nonu
+  colorscheme base16-default
 else
   syntax on
   set nonu
+  colorscheme nazca
 endif
 
-colorscheme base16-default
 
 
 syntax enable

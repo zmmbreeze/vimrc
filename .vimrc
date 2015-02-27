@@ -50,6 +50,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'ap/vim-css-color'
 Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
+Plugin 'wavded/vim-stylus'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'juvenn/mustache.vim'
 Plugin 'marijnh/tern_for_vim'
 "Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplcache.vim'
@@ -165,7 +168,7 @@ if MySys() == "mac"
 elseif MySys() == "windows"
   set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 elseif MySys() == "linux"
-  set gfn=Fantasque\ Sans\ Mono\ 13
+  set gfn=Source\ Code\ Pro\ for\ Powerline\ 13
   set shell=/bin/bash
 endif
 
@@ -175,9 +178,6 @@ if has("gui_running")
   set t_Co=256
   if MySys() == "mac"
     set transparency=8
-  endif
-  if MySys() == "linux"
-    set guioptions-=e
   endif
   set nonu
 else
@@ -425,7 +425,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Abbrevs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab xdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+iab xdate <c-r>=strftime("%Y/%m/%d %H:%M:%S")<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

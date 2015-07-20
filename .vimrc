@@ -49,6 +49,7 @@ Plugin 'taiansu/nerdtree-ag'
 Plugin 'godlygeek/tabular'
 Plugin 'ap/vim-css-color'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'groenewege/vim-less'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
@@ -57,6 +58,7 @@ Plugin 'marijnh/tern_for_vim'
 "Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Bling/vim-airline'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 
 
@@ -180,7 +182,8 @@ if has("gui_running")
     set transparency=8
   endif
   set nonu
-  colorscheme base16-default
+  " colorscheme base16-default
+  colorscheme hybrid_material
 else
   syntax on
   set nonu

@@ -162,7 +162,7 @@ syntax enable "Enable syntax hl
 
 " Set font according to system
 if MySys() == "mac"
-  set gfn=Source\ Code\ Pro\ for\ Powerline:h14
+  set gfn=Source\ Code\ Pro\ for\ Powerline:h16
   set linespace=2
   set shell=/bin/bash
 elseif MySys() == "windows"

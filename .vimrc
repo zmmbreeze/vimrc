@@ -44,11 +44,13 @@ call vundle#begin()
 Plugin 'mattn/emmet-vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/NERDTree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'rking/ag.vim'
 Plugin 'taiansu/nerdtree-ag'
 Plugin 'godlygeek/tabular'
 Plugin 'ap/vim-css-color'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'groenewege/vim-less'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
@@ -57,6 +59,8 @@ Plugin 'marijnh/tern_for_vim'
 "Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Bling/vim-airline'
+Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'kien/ctrlp.vim'
 
 
 
@@ -180,7 +184,8 @@ if has("gui_running")
     set transparency=8
   endif
   set nonu
-  colorscheme base16-default
+  " colorscheme base16-default
+  colorscheme hybrid_material
 else
   syntax on
   set nonu
@@ -591,3 +596,23 @@ else
 endif
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrip.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+if MySys() == "mac"
+  map <D-p> <C-p>
+endif
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remove trailing whitespace in vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufWritePre * :%s/\s\+$//e

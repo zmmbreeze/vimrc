@@ -50,6 +50,7 @@ Plugin 'taiansu/nerdtree-ag'
 Plugin 'godlygeek/tabular'
 Plugin 'ap/vim-css-color'
 Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'groenewege/vim-less'
 Plugin 'wavded/vim-stylus'
@@ -61,6 +62,7 @@ Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Bling/vim-airline'
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
 
 
 
@@ -146,7 +148,7 @@ set smartcase
 set hlsearch "Highlight search things
 
 set incsearch "Make search act like search in modern browsers
-set nolazyredraw "Don't redraw while executing macros 
+set nolazyredraw "Don't redraw while executing macros
 
 set magic "Set magic on, for regular expressions
 
@@ -318,7 +320,7 @@ cmap ½ $
 
 func! Cwd()
   let cwd = getcwd()
-  return "e " . cwd 
+  return "e " . cwd
 endfunc
 
 func! DeleteTillSlash()
@@ -397,7 +399,7 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=usetab
   set stal=2
@@ -504,7 +506,7 @@ endfunction
 
 function! SaveSession()
     "NERDTree doesn't support session, so close before saving
-    execute ':NERDTreeClose' 
+    execute ':NERDTreeClose'
     let project_name = GetProjectName()
     execute 'mksession! ~/.vim/sessions/' . project_name
 endfunction
@@ -522,7 +524,7 @@ function! RestoreSession()
         endif
     endif
     "Make sure the syntax is on
-    syntax on 
+    syntax on
 endfunction
 
 " Persistent undo
@@ -616,3 +618,9 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " Remove trailing whitespace in vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufWritePre * :%s/\s\+$//e
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_javascript_checkers = ['eslint']

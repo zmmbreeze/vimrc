@@ -41,6 +41,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/NERDTree'
